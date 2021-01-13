@@ -1,5 +1,4 @@
-package server.unary.service.impl;
-
+package unary.server.impl;
 
 import io.grpc.stub.StreamObserver;
 import operation.Operation;
@@ -19,7 +18,7 @@ public class OperationServiceImpl extends OperationServiceGrpc.OperationServiceI
         Operation operation =  request.getOperation();
         //Create a response
         OperationResponse operationResponse =  OperationResponse.newBuilder()
-                .setResult(operation.getDescription() + " with server").build();
+                .setResult(operation.getDescription() + " with unary.server").build();
 
         responseObserver.onNext(operationResponse);
         responseObserver.onCompleted();

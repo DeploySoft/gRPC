@@ -1,8 +1,8 @@
-package server.unary;
+package unary.server;
 
-import io.grpc.ServerBuilder;
 import io.grpc.Server;
-import server.unary.service.impl.OperationServiceImpl;
+import io.grpc.ServerBuilder;
+import unary.server.impl.OperationServiceImpl;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ public class GRPCServer {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        System.out.println("Running as gRPC server..");
+        System.out.println("Running as gRPC unary.server..");
 
         Server server = ServerBuilder
                 .forPort(8080)

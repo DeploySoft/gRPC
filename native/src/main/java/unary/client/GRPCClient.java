@@ -1,4 +1,4 @@
-package client.unary;
+package unary.client;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -14,7 +14,7 @@ import operation.OperationServiceGrpc;
 public class GRPCClient {
 
     public static void main(String[] args) {
-        System.out.println("Running as gRPC client..");
+        System.out.println("Running as gRPC unary.client..");
 
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",8080)
                 .usePlaintext() //Just for local development
