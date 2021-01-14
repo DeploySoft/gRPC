@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package actions;
+
+option java_package = "com.example.springboot.grpc";
+option java_multiple_files = true;
+
+message Operation {
+  int32 id = 1;
+  string description = 2;
+}
+
+message OperationRequest {
+  Operation operation = 1;
+}
+
+message OperationResponse {
+  string result = 1;
+}
+
+
+service OperationService {
+  // Unary
+  rpc Operation(OperationRequest) returns (OperationResponse) {};
+
+}
